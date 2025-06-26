@@ -5,7 +5,8 @@ TypeRush is a thrilling, interactive typing game that combines speed, accuracy, 
 TypeRush is a space-themed typing adventure game designed to boost your typing speed and accuracy with fun quests, real-time scoring, and exciting achievements. Play through different levels, unlock power-ups, and see your name in the Hall of Fame!
 
 ## Live Demo
-[![Live Demo](typerushadventure.netlify.app)](typerushadventure.netlify.app)
+[![Live Demo](https://img.shields.io/badge/Play%20Now-Live%20Demo-blue?style=for-the-badge&logo=rocket)](https://typerushadventure.netlify.app)
+
 
 
 🎮 Play it here: (typerushadventure.netlify.app)
