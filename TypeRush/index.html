@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeRush - Typing Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="title">🚀 TYPE RUSH</h1>
+            <p class="subtitle">Level up your typing skills in this epic adventure!</p>
+        </div>
+
+        <div class="player-info">
+            <div class="info-card">
+                <div class="info-value" id="level">1</div>
+                <div class="info-label">Level</div>
+                <div class="level-bar">
+                    <div class="level-progress" id="levelProgress" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-value" id="score">0</div>
+                <div class="info-label">Score</div>
+            </div>
+            <div class="info-card">
+                <div class="info-value" id="combo">0</div>
+                <div class="info-label">Combo</div>
+            </div>
+            <div class="info-card">
+                <div class="info-value" id="timer">60</div>
+                <div class="info-label">Time</div>
+            </div>
+            <div class="info-card">
+                <div class="info-value" id="wpm">0</div>
+                <div class="info-label">WPM</div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="power-ups">
+                <button class="power-up" id="timeBoost" onclick="usePowerUp('time')">⏰ Time Boost</button>
+                <button class="power-up" id="doubleScore" onclick="usePowerUp('score')">💎 2x Score</button>
+                <button class="power-up" id="slowTime" onclick="usePowerUp('slow')">🐌 Slow Time</button>
+            </div>
+
+            <div class="text-display" id="textDisplay"></div>
+            <input type="text" class="typing-input" id="typingInput" placeholder="🎮 Press START to begin your adventure!" disabled>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-start" id="startBtn">🚀 START GAME</button>
+            <button class="btn btn-reset" id="resetBtn">🔄 RESET</button>
+            <button class="btn btn-new" id="newBtn">🎲 NEW QUEST</button>
+        </div>
+
+        <div class="achievements">
+            <div class="achievement" id="speedster">
+                <div class="achievement-icon">⚡</div>
+                <div class="achievement-title">Speed Demon</div>
+                <div class="achievement-desc">60+ WPM</div>
+            </div>
+            <div class="achievement" id="perfectionist">
+                <div class="achievement-icon">🎯</div>
+                <div class="achievement-title">Perfectionist</div>
+                <div class="achievement-desc">100% Accuracy</div>
+            </div>
+            <div class="achievement" id="combo-master">
+                <div class="achievement-icon">🔥</div>
+                <div class="achievement-title">Combo Master</div>
+                <div class="achievement-desc">50+ Combo</div>
+            </div>
+            <div class="achievement" id="level-up">
+                <div class="achievement-icon">🏆</div>
+                <div class="achievement-title">Level 5</div>
+                <div class="achievement-desc">Reach Level 5</div>
+            </div>
+        </div>
+
+        <div class="leaderboard">
+            <h3>🏆 HALL OF FAME</h3>
+            <div id="scoresList"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <h2 id="modalTitle">🎉 MISSION COMPLETE!</h2>
+            <div id="modalStats"></div>
+            <div id="newAchievements"></div>
+            <button class="btn btn-start" onclick="closeModal()">🚀 CONTINUE ADVENTURE</button>
+        </div>
+    </div>
+
+    <div class="celebration" id="celebration"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
